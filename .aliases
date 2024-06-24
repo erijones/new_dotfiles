@@ -1,0 +1,25 @@
+#!/usr/bin/zsh
+
+alias p="pwd"
+alias ls='ls --color=auto'
+alias lp='ls *.pdf'
+alias lm='ls *.md'
+
+alias tarx='tar -xvf'
+alias tarc='tar -cvf'
+
+#alias okular='okular &> /dev/null'
+
+alias vi='vim'
+alias v='vim'
+alias c='cd'
+alias l='ls'
+alias q='./run'
+alias pdf='mupdf &> /dev/null'
+#alias pdf='zathura &> /dev/null'
+alias lt='ls -cltrh'
+alias iftop='sudo iftop -i wlp2s0 -m 10M'
+
+alias pulse='~/aur/pulseconnectsecure-arch/PulseClient.sh -h ps.vpn.ucsb.edu -u ewj -U https://ps.vpn.ucsb.edu/ra -r UCSB-Remote-Access'
+alias pulse_test='~/aur/pulseconnectsecure-arch/PulseClient.sh -S'
+

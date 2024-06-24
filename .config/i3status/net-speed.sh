@@ -1,0 +1,1 @@
+/usr/share/doc/i3status/contrib/net-speed.sh

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+file="$1"
+dir="$(dirname "$file")"
+
+if [[ ! -f "$1.md" ]]; then
+    echo "Usage: $0 <file name without extension>"
+    exit 1
+fi
+
+# Specify beamer/latex in title
+if grep '^format: beamer' "$file.md" &> /dev/null; then
+    pandoc -s -f markdown -t beamer -o "$file.tex" "$file.md"
+else
+    pandoc -s -f markdown -t latex -o  "$file.tex" "$file.md"
+fi
+
+pdflatex -output-directory "$dir" "$file" \
+    && bibtex "$file" \
+    && pdflatex -output-directory "$dir" "$file" \
+    && pdflatex -output-directory "$dir" "$file"
+
+rm "$file.aux" "$file.bbl" "$file.blg" "$file.log" "$file.out" "$file.nav" "$file.snm" "$file.toc"

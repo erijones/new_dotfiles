@@ -1,0 +1,2 @@
+#!/bin/bash
+xterm -geometry 100x5 -e "acestream-launcher "$1" --player mpv"

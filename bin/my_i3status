@@ -1,0 +1,11 @@
+#!/bin/bash
+
+i3status | while :
+do
+    read line
+    # find current memory usage
+    var1=$(cat /proc/meminfo | grep 'MemAvailable' | tr -dc '0-9')
+    var2=$(cat /proc/meminfo | grep 'MemTotal' | tr -dc '0-9')
+    mem_var=$(echo "scale=2; 1 - ($var1 / $var2)" | bc)
+    echo "$mem_var | $line" || exit 1
+done

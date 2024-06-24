@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /usr/lib/firmware
+sudo rm iwlwifi-7265D-13.ucode

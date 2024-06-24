@@ -1,0 +1,35 @@
+backend : qt5agg
+
+text.usetex : True 
+text.latex.preamble : \usepackage{amsmath}
+font.family : DejaVu Sans
+font.serif : cm
+#font.size : 5
+#font.size : 28
+#ytick.labelsize : 5
+
+image.cmap : hsv
+
+lines.markersize : 10
+lines.linewidth : 3
+
+legend.numpoints : 1
+
+figure.max_open_warning : 40
+
+#figure.figsize   : [8.0, 6.0]
+#figure.dpi       : 80
+#savefig.dpi      : 100
+# NORMAL FONT SIZE:
+#font.size        : 16.0
+#font.size        : 20.0
+#font.size        : 28.0
+font.size        : 18.0
+##font.size        : 14.0
+# PUBLICATION FONT SIZE
+#font.size        : 28.0
+#legend.fontsize  : 'large'
+#figure.titlesize : 'medium'
+
+# make it work in illustrator?
+pdf.fonttype : 42

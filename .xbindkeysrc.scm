@@ -1,0 +1,7 @@
+(xbindkey '("XF86AudioRaiseVolume") "amixer -q -D pulse set Master 5%+ unmute")
+(xbindkey '("XF86AudioLowerVolume") "amixer -q -D pulse set Master 5%- unumte")
+(xbindkey '("XF86AudioMute") "amixer -D pulse set Master Playback Switch toggle")
+(xbindkey '("XF86AudioMicMute") "amixer -q -D pulse set Master 70%")
+(xbindkey '("XF86MonBrightnessDown") "xbacklight -dec 10")
+(xbindkey '("XF86MonBrightnessUp") "xbacklight -inc 10")
+(xbindkey '("XF86WLAN") "nmcli r wifi off && sleep 1 && nmcli r wifi on")

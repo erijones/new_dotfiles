@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# CALL:    compile_article filename.tex
+# RETURNS: filename.pdf
+
+# get filename without .tex extension
+filename=${1%.*}
+
+pdflatex $filename
+bibtex $filename
+pdflatex $filename
+pdflatex $filename
+
+#clean_up_files &> /dev/null
+#clean_up_files

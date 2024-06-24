@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+rm *.blg *.bbl *.aux *.log *.nav *.out *.snm *.toc &> /dev/null

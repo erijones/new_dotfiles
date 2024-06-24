@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#
+# backup_files: mount an external hard drive, copy all files in a local 'work'
+# directory onto the hard drive, log the backup date, and unmount the hard
+# drive
+
+
+# once external hard drive is connected, replace `sdb1` by the device name
+# (found with `lsblk`), and replace `/mnt/backup` by your system's mount point
+sudo mount /dev/sdb1 /mnt/backup
+# replace `/home/eric/work` with the desired work directory you would like to
+# backup. rsync is 'smart enough' to only copy files that have been changed
+# since the last backup. 
+sudo rsync -av /home/eric/work/ /mnt/backup
+sudo rsync -av /home/eric/backup/Dropbox/Chris_and_Eric /mnt/backup
+sudo echo "last backed up `date`" >> /mnt/backup/backup_log
+sudo umount /mnt/backup
+
+
